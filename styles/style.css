@@ -10,7 +10,7 @@
 }
 
 .h100 {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .optionsCol {
@@ -39,9 +39,20 @@
 }
 
 .randName {
-    margin-top: 35px;
+    font-style: italic;
+}
+
+.margin {
+   margin-top: 35px;
+   margin-bottom: 35px;
 }
 
 .groups {
-    margin-top: 35px;
+    font-style: italic;
+}
+
+.label {
+    color: #C7B7A3;
+    font-size: 28px;
+    padding-bottom: 8px;
 }

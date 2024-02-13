@@ -14,6 +14,10 @@ let displayCol = document.getElementById("displayCol");
 
 
 let arr = [];
+const updateSlider = () => {
+    groupVal.textContent = groupSlider.value;
+    console.log("change");
+}
 
 const update = () => {
     generateDiv.innerHTML = "";
@@ -22,14 +26,12 @@ const update = () => {
 
     arr.map(el => addName(el)); 
     groupSlider.max = arr.length;
+    updateSlider();
 }
 
 update();
 
-const updateSlider = () => {
-    groupVal.textContent = groupSlider.value;
-    console.log("change");
-}
+
 
 groupSlider.onchange = () => {
     updateSlider();
@@ -56,7 +58,7 @@ randomBtn.addEventListener('click', () => {
     let num = Math.floor(Math.random() * newArr.length);
     let h2 = document.createElement("h2");
     h2.textContent = newArr[num];
-    h2.className = "light randName";
+    h2.className = "light randName ";
     console.log(newArr);
     generateDiv.append(h2);
 })
