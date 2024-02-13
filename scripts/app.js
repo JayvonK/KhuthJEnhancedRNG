@@ -1,5 +1,6 @@
 import { addName } from "./addName.js";
 import { saveLocalStorage, getLocalStorage } from "./localStorage.js";
+import { randomGroup } from "./randomGroup.js";
 
 let nameInput = document.getElementById("nameInput");
 let addBtn = document.getElementById("addBtn");
@@ -44,13 +45,20 @@ addBtn.addEventListener('click', () => {
 })
 
 randomBtn.addEventListener('click', () => {
+    let newArr = getLocalStorage();
     generateDiv.innerHTML = "";
-    let num = Math.floor(Math.random() * arr.length);
+    console.log('hi');
+    let num = Math.floor(Math.random() * newArr.length);
     let h2 = document.createElement("h2");
-    h2.textContent = arr[num];
+    h2.textContent = newArr[num];
     h2.className = "light randName";
-
+    console.log(newArr);
     generateDiv.append(h2);
 })
 
-export { displayCol, update }
+generateBtn.addEventListener('click', () => {
+    let groupArr = getLocalStorage();
+    randomGroup(groupArr, groupSlider.value);
+})
+
+export { displayCol, update, generateDiv }
