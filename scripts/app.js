@@ -10,9 +10,11 @@ let randomBtn = document.getElementById("randomBtn");
 let generateDiv = document.getElementById("generateDiv");
 let displayCol = document.getElementById("displayCol");
 
+let arr = [];
+
 const update = () => {
     displayCol.innerHTML = "";
-    let arr = getLocalStorage();
+    arr = getLocalStorage();
 
     arr.map(el => addName(el)); 
     groupSlider.max = arr.length;
@@ -41,6 +43,14 @@ addBtn.addEventListener('click', () => {
     update();
 })
 
+randomBtn.addEventListener('click', () => {
+    generateDiv.innerHTML = "";
+    let num = Math.floor(Math.random() * arr.length);
+    let h2 = document.createElement("h2");
+    h2.textContent = arr[num];
+    h2.className = "light randName";
 
+    generateDiv.append(h2);
+})
 
 export { displayCol, update }

@@ -37,3 +37,7 @@
 .pointer:hover {
     cursor:pointer;
 }
+
+.randName {
+    margin-top: 35px;
+}
