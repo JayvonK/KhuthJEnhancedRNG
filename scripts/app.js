@@ -30,7 +30,7 @@ const update = () => {
     displayCol.innerHTML = "";
     arr = getLocalStorage();
 
-    arr.map(el => addName(el)); 
+    arr.map(el => addName(el));
     groupSlider.max = arr.length;
     updateSlider();
 }
@@ -42,17 +42,27 @@ groupSlider.onchange = () => {
 };
 
 nameInput.addEventListener('keydown', (e) => {
-    if(e.key === "Enter"){
-        saveLocalStorage(e.target.value);
-        update();
-        e.target.value = "";
+    if (e.key === "Enter") {
+        if (e.target.value.trim() === "") {
+            alert("Enter a name");
+        } else {
+            saveLocalStorage(e.target.value);
+            update();
+            e.target.value = "";
+        }
     }
 })
 
 addBtn.addEventListener('click', () => {
-    saveLocalStorage(nameInput.value);
-    update();
-    nameInput.value = "";
+    if (nameInput.value.trim() === "") {
+        alert("Enter a name");
+    } else {
+        saveLocalStorage(nameInput.value);
+        update();
+        nameInput.value = "";
+    }
+    console.log(nameInput.value);
+
 })
 
 userBtn.addEventListener('click', async () => {
