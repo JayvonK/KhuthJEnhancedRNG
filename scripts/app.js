@@ -9,7 +9,11 @@ let randomBtn = document.getElementById("randomBtn");
 let generateDiv = document.getElementById("generateDiv");
 let displayCol = document.getElementById("displayCol");
 
-
+nameInput.addEventListener('keydown', (e) => {
+    if(e.key === "Enter"){
+        addName(e.target.value);
+    }
+})
 
 
 
