@@ -11,6 +11,13 @@ let generateBtn = document.getElementById("generateBtn");
 let randomBtn = document.getElementById("randomBtn");
 let generateDiv = document.getElementById("generateDiv");
 let displayCol = document.getElementById("displayCol");
+let userBtn = document.getElementById("userBtn");
+
+const randomUser = async () => {
+    const promise = await fetch('https://randomuser.me/api/');
+    const data = await promise.json();
+    return data.results[0].name.first + " " + data.results[0].name.last;
+}
 
 
 let arr = [];
@@ -31,8 +38,6 @@ const update = () => {
 
 update();
 
-
-
 groupSlider.onchange = () => {
     updateSlider();
 };
@@ -49,6 +54,11 @@ addBtn.addEventListener('click', () => {
     saveLocalStorage(nameInput.value);
     update();
     nameInput.value = "";
+})
+
+userBtn.addEventListener('click', async () => {
+    saveLocalStorage(await randomUser());
+    update();
 })
 
 randomBtn.addEventListener('click', () => {
