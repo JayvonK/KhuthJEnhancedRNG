@@ -1,10 +1,11 @@
 import { generateDiv } from "./app.js";
 
 const randomGroup = (arr, num) => {
-    if(num !== "0") {
+    if (num !== "0") {
         let array = [];
         let randArr = arr;
         let count = 0;
+        let mixArray = [];
 
         for (let i = 0; i < num; i++) {
             let empty = [];
@@ -21,20 +22,26 @@ const randomGroup = (arr, num) => {
             }
         }
 
+        while (array.length >= 1) {
+            let index = Math.floor(Math.random() * array.length);
+            mixArray.push(array[index]);
+            array.splice(index, 1);
+        }
+
         generateDiv.innerHTML = "";
 
-        array.map(ray => {
+        mixArray.map(ray => {
             count++;
             let h2 = document.createElement("h2");
             h2.textContent = "Group " + count + ": ";
             h2.className = "light groups";
 
-            for(let i = 0; i < ray.length; i++){
-                if(ray.length > 1){
-                    if(i === ray.length - 1){
-                    h2.textContent += ray[i];
-                    }else {
-                       h2.textContent += ray[i] + ", "; 
+            for (let i = 0; i < ray.length; i++) {
+                if (ray.length > 1) {
+                    if (i === ray.length - 1) {
+                        h2.textContent += ray[i];
+                    } else {
+                        h2.textContent += ray[i] + ", ";
                     }
                 } else {
                     h2.textContent += ray[i];
@@ -43,7 +50,7 @@ const randomGroup = (arr, num) => {
 
             generateDiv.append(h2);
         })
-    } 
+    }
 }
 
 export { randomGroup }
