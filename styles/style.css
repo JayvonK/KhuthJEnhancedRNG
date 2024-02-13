@@ -1,0 +1,35 @@
+
+.navRow {
+    background-color: #561c24;
+    padding: 20px 0px;
+}
+
+.light {
+    color: #E8D8C4;
+}
+
+.h100 {
+    height: 100vh;
+}
+
+.optionsCol {
+    background-color: #6D2932;
+}
+
+.displayCol {
+    background-color: #C7B7A3;
+}
+
+.names {
+    background-color: #561c24;
+    color: #E8D8C4;
+    border: none;
+    font-size: 36px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.names:hover {
+    cursor: default;
+}

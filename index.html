@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row navRow">
+            <h1 class="text-center light">Enhanced Random Name Generator</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-4 h100 optionsCol">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="light" style="margin-top: 35px; margin-bottom: 35px;">Add Name: <input id="nameInput"
+                                type="text" placeholder="Enter a name"> <button id="addBtn" type="button"
+                                class="btn btn-success" style="margin-bottom: 10px">Add</button></h3>
+
+                        <h3 class="light">Group Size: <input id="groupSlider" type="range" min="1" max="100" value="50"
+                                name="group"><label id="groupVal" for="group"
+                                style="margin-left: 10px;">0</label><button id="generateBtn" type="button"
+                                class="btn btn-success"
+                                style="margin-bottom: 10px; margin-left: 15px;">Generate</button></h3>
+
+                        <button id="randomBtn" type="button" class="btn btn-primary" style="margin-top: 35px">Generate
+                            Random Person</button>
+
+                        <div id="generateDiv">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 h100 displayCol">
+                <div class="row" style="padding-top: 35px">
+                    <div class="col"></div>
+                    <div id="displayCol" class="col-10">
+                            <button class="names">Jayvon<img src="./assets/x (1).svg" alt=""></button> 
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+
+</html>
