@@ -1,7 +1,10 @@
-
 @font-face {
     font-family: comfort;
     src: url(../assets/Comfortaa-Regular.ttf);
+}
+
+.title {
+    font-size: 58px;
 }
 
 .navRow {
@@ -42,7 +45,7 @@
 }
 
 .pointer:hover {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .randName {
@@ -50,17 +53,143 @@
 }
 
 .margin {
-   margin-top: 35px;
-   margin-bottom: 35px;
-   font-family: comfort;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-family: comfort;
 }
 
 .groups {
     font-style: italic;
+    padding-bottom: 10px;
 }
 
 .label {
     color: #C7B7A3;
     font-size: 28px;
     padding-bottom: 8px;
+}
+
+.nameInput {
+    height: 40px;
+    width: 45%;
+    font-size: 28px;
+}
+
+.addBtn {
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.slider {
+    width: 45%;
+}
+
+.xBtn {
+    margin-left: 10px;
+}
+
+.colPad {
+    padding-left: 25px;
+}
+
+.generateBtn {
+    margin-bottom: 12px;
+     margin-left: 20px;
+}
+
+
+@media screen and (max-width: 1475px) {
+    .nameInput {
+        width: 85%;
+        margin-bottom: 20px;
+    }
+
+    .generateDiv {
+        font-size: 20px;
+    }
+
+    .addBtn {
+        margin-left: 0px;
+    }
+
+    .groups {
+        font-size: 28px;
+    }
+
+    .randName {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .names {
+        font-size: 20px;
+    }
+
+    .groups {
+        font-size: 20px;
+    }
+
+    .randName {
+        font-size: 20px;
+    }
+
+    .slider {
+        width: 75%;
+    }
+
+    .xBtn {
+        margin-left: 5px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .generateBtn {
+         margin-left: 0px;
+    }
+
+
+}
+
+@media screen and (max-width: 680px) {
+    .names {
+        font-size: 16px;
+    }
+
+    /* .groups {
+        font-size: 20px;
+    }
+
+    .randName {
+        font-size: 20px;
+    } */
+
+    .nameInput {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .slider {
+        width: 70%;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .colPad {
+        padding-left: 9px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subTitle {
+        font-size: 16px;
+    }
+
+    
 }

@@ -13,25 +13,24 @@
 <body>
     <div class="container-fluid">
         <div class="row navRow">
-            <h1 class="text-center light" style="font-size: 58px">
+            <h1 class="text-center light title">
                 Enhanced Random Name Generator
             </h1>
         </div>
 
         <div class="row">
-            <div class="col-4 h100 optionsCol">
+            <div class="col-5 col-lg-4 h100 optionsCol">
                 <div class="row">
-                    <div class="col" style="padding-left: 25px;">
+                    <div class="col colPad">
                         <div class="margin">
-                            <h3 class="light" style="margin-bottom: 10px">Add Name:</h3>
-                            <input id="nameInput" type="text" placeholder="Enter a name"
-                                style="height: 40px; width: 45%; font-size: 28px" />
-                            <button id="addBtn" type="button" class="btn btn-success"
-                                style="margin-bottom: 10px; margin-left: 15px">
+                            <h3 class="light subTitle" style="margin-bottom: 10px">Add Name:</h3>
+                            <input id="nameInput" class="nameInput" type="text" placeholder="Enter a name" />
+                            <button id="addBtn" type="button" class="btn btn-success addBtn"
+                            >
                                 Add
                             </button>
-                            <button id="userBtn" type="button" class="btn btn-danger"
-                                style="margin-bottom: 10px; margin-left: 15px">
+                            <button id="userBtn" type="button" class="btn btn-danger addBtn"
+                                >
                                 Add Random
                             </button>
                         </div>
@@ -39,11 +38,10 @@
                         <hr />
 
                         <div class="margin">
-                            <h3 class="light">Group Size:</h3>
-                            <input id="groupSlider" type="range" min="0" max="100" value="0" name="group"
-                                style="width: 45%" /><label class="label" id="groupVal" for="group"
+                            <h3 class="light subTitle">Group Size:</h3>
+                            <input class="slider" id="groupSlider" type="range" min="0" max="100" value="0" name="group" /><label class="label subTitle" id="groupVal" for="group"
                                 style="margin-left: 20px">0</label><button id="generateBtn" type="button"
-                                class="btn btn-success" style="margin-bottom: 12px; margin-left: 20px">
+                                class="btn btn-success generateBtn">
                                 Generate
                             </button>
                         </div>
@@ -56,16 +54,16 @@
 
                         <hr />
 
-                        <div id="generateDiv"></div>
+                        <div id="generateDiv" class="generateDiv"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-8 h100 displayCol">
+            <div class="col-7 col-lg-8 h100 displayCol">
                 <div class="row" style="padding-top: 35px">
                     <div class="col"></div>
-                    <div id="displayCol" class="col-10">
+                    <div id="displayCol" class="col-12 col-lg-10">
                         <button class="names">
-                            Jayvon<img src="./assets/x (1).svg" alt="" style="margin-left: 10px" />
+                            Jayvon<img class="xBtn" src="./assets/x (1).svg" alt="" />
                         </button>
                     </div>
                     <div class="col"></div>
