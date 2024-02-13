@@ -1,8 +1,14 @@
 
+@font-face {
+    font-family: comfort;
+    src: url(../assets/Comfortaa-Regular.ttf);
+}
+
 .navRow {
     background-color: #561c24;
     padding: 30px 0px;
     font-size: 80px;
+    font-family: comfort;
 }
 
 .light {
@@ -28,6 +34,7 @@
     padding: 10px 15px 10px 15px;
     border-radius: 15px;
     margin: 20px;
+    font-family: comfort;
 }
 
 .names:hover {
@@ -45,6 +52,7 @@
 .margin {
    margin-top: 35px;
    margin-bottom: 35px;
+   font-family: comfort;
 }
 
 .groups {
