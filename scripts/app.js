@@ -1,6 +1,7 @@
 import { addName } from "./addName.js";
 import { saveLocalStorage, getLocalStorage } from "./localStorage.js";
 import { randomGroup } from "./randomGroup.js";
+import { colorReturn } from "./colorReturn.js";
 
 let nameInput = document.getElementById("nameInput");
 let addBtn = document.getElementById("addBtn");
@@ -11,9 +12,11 @@ let randomBtn = document.getElementById("randomBtn");
 let generateDiv = document.getElementById("generateDiv");
 let displayCol = document.getElementById("displayCol");
 
+
 let arr = [];
 
 const update = () => {
+    generateDiv.innerHTML = "";
     displayCol.innerHTML = "";
     arr = getLocalStorage();
 
@@ -36,12 +39,14 @@ nameInput.addEventListener('keydown', (e) => {
     if(e.key === "Enter"){
         saveLocalStorage(e.target.value);
         update();
+        e.target.value = "";
     }
 })
 
 addBtn.addEventListener('click', () => {
     saveLocalStorage(nameInput.value);
     update();
+    nameInput.value = "";
 })
 
 randomBtn.addEventListener('click', () => {
