@@ -1,4 +1,5 @@
-import { displayCol } from "./app.js";
+import { displayCol, update } from "./app.js";
+import { removeLocalStorage } from "./localStorage.js";
 
 const addName = (name) => {
     let button = document.createElement("button");
@@ -12,7 +13,8 @@ const addName = (name) => {
     button.append(img);
 
     img.addEventListener('click', () => {
-        button.remove();
+        removeLocalStorage(name);
+        update();
     })
 
     displayCol.append(button);
