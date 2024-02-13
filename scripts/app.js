@@ -1,7 +1,6 @@
 import { addName } from "./addName.js";
 import { saveLocalStorage, getLocalStorage } from "./localStorage.js";
 import { randomGroup } from "./randomGroup.js";
-import { colorReturn } from "./colorReturn.js";
 
 let nameInput = document.getElementById("nameInput");
 let addBtn = document.getElementById("addBtn");

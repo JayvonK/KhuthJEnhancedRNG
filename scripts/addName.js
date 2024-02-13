@@ -11,7 +11,7 @@ const addName = (name) => {
     let img = document.createElement("img");
     img.src = "./assets/x (1).svg";
     img.className = "pointer";
-    img.style = "margin-left: 10px";
+    img.style = "margin-left: 20px";
 
     button.append(img);
 
