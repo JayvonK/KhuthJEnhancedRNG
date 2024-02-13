@@ -33,3 +33,7 @@
 .names:hover {
     cursor: default;
 }
+
+.pointer:hover {
+    cursor:pointer;
+}
